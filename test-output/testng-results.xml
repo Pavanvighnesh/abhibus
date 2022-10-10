@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-10T16:31:47 IST" name="Default suite" finished-at="2022-10-10T16:32:19 IST" duration-ms="31465">
+  <suite started-at="2022-10-10T18:02:55 IST" name="Default suite" finished-at="2022-10-10T18:03:35 IST" duration-ms="40103">
     <groups>
     </groups>
-    <test started-at="2022-10-10T16:31:47 IST" name="Default test" finished-at="2022-10-10T16:32:19 IST" duration-ms="31465">
+    <test started-at="2022-10-10T18:02:55 IST" name="Default test" finished-at="2022-10-10T18:03:35 IST" duration-ms="40103">
       <class name="mpack.abhibusbooking">
-        <test-method signature="abhibusbooking()[pri:0, instance:mpack.abhibusbooking@5119fb47]" started-at="2022-10-10T16:31:47 IST" name="abhibusbooking" finished-at="2022-10-10T16:32:19 IST" duration-ms="31384" status="PASS">
+        <test-method signature="abhibusbooking()[pri:0, instance:mpack.abhibusbooking@5119fb47]" started-at="2022-10-10T18:02:55 IST" name="abhibusbooking" finished-at="2022-10-10T18:03:35 IST" duration-ms="40022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- abhibusbooking -->

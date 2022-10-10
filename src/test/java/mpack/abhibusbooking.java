@@ -87,6 +87,7 @@ public class abhibusbooking extends Base {
 	        
 	    File screenshotFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		 FileUtils.copyFile(screenshotFile2, new File("screenshots\\screenshot2.jpg"));
+		 driver.quit();
 	 }
 }
 
