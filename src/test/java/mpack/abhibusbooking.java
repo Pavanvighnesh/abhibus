@@ -16,7 +16,22 @@ import org.testng.annotations.Test;
 
 public class abhibusbooking extends Base {
 	 WebDriver driver;
-	 @SuppressWarnings("deprecation")
+	 @Test
+	 public void login() throws InterruptedException {
+	 	driver=initializedriver();
+	 	 driver.get("https://www.abhibus.com/");
+	 	  driver.manage().window().maximize();
+	 	   WebElement acclogin = driver.findElement(By.id("AccLogin"));
+	 	   acclogin.click();
+	 	   Thread.sleep(2000);
+	 	   WebElement mobileno2=driver.findElement(By.id("mobileNo"));
+	 	   mobileno2.sendKeys("7993543979");
+	 	   WebElement otp=driver.findElement(By.id("getotp"));
+	 	   otp.click();
+	 	   driver.close();
+	 }
+
+	
 	@Test
 	 public void abhibusbooking() throws IOException, InterruptedException {
 		  driver=initializedriver();
@@ -88,7 +103,10 @@ public class abhibusbooking extends Base {
 	    File screenshotFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		 FileUtils.copyFile(screenshotFile2, new File("screenshots\\screenshot2.jpg"));
 		 driver.quit();
-	 }
+	 } 
+
+
+	
 }
 
 
