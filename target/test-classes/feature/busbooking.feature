@@ -2,6 +2,7 @@ Feature: Booking a bus ticket
 
 Scenario: user should be able  select the seat for required bus.
 Given navigates to abhibus website.
+Then i should take screenshot of starting page.
 Then i should enter source and destination.
 Then i should select the Journey date.
 And i click on Search button.
@@ -13,3 +14,4 @@ And i should enter the mobile number.
 And  i should enter the email Id and mobile number.
 And i should enter  name and age.
 Then i should click on Paynow.
+Then i should take screenshot of ending page

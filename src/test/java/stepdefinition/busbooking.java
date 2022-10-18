@@ -1,7 +1,12 @@
 package stepdefinition;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +30,12 @@ public class busbooking {
 		driver.get("https://www.abhibus.com/");
 	 	  driver.manage().window().maximize();
     }
+
+    @Then("i should take screenshot of starting page.")
+    public void i_should_take_screenshot_of_starting_page() throws Throwable {
+    	File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		  FileUtils.copyFile(screenshotFile, new File("target\\screen\\screenshot1.jpg")); 
+	      }
 	@Then("i should enter source and destination.")
 	public void i_should_enter_source_and_destination() throws InterruptedException {
 		 WebElement from = driver.findElement(By.id("source"));
@@ -84,7 +95,7 @@ public class busbooking {
 			     showlayout.click(); 
 			     Thread.sleep(2000);
 	   
-	    	WebElement element = driver.findElement(By.id("O5-10ZZ"));
+	    	WebElement element = driver.findElement(By.id("O4-9ZZ"));
 		     element.click();
 		     
 	    }
@@ -92,9 +103,7 @@ public class busbooking {
 	    @Then("i should click on Continue to payment.")
 	    public void i_should_click_on_continue_to_payment() throws Throwable {
 	    
-	    }
-	  
-	    public void i_should_click_on_paynow() throws Throwable {
+	    
 	    	WebElement continuepay=driver.findElement(By.id("btnEnable1"));
 	        continuepay.click();
 	    }
@@ -126,10 +135,17 @@ public class busbooking {
 	    public void i_should_click_on_paynow1() throws Throwable {
 	    	 WebElement payment=driver.findElement(By.id("paynow"));
 		        payment.click();
-	    
+	    }
 
-	}
-	    
+	
+
+	    @Then("^i should take screenshot of ending page$")
+	    public void i_should_take_screenshot_of_ending_page() throws Throwable {
+	    	File screenshotFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			 FileUtils.copyFile(screenshotFile2, new File("target\\screen\\screenshot2.jpg"));
+			    
+	    }
+	        
 	    
 }
 
