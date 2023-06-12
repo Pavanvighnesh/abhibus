@@ -6,6 +6,7 @@
       <class name="mpack.abhibusbooking">
         <methods>
           <include name="abhibusbooking"/>
+          <include name="login"/>
         </methods>
       </class> <!-- mpack.abhibusbooking -->
     </classes>

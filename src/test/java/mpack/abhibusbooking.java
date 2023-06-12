@@ -19,6 +19,7 @@ public class abhibusbooking extends Base {
 	 @Test
 	 public void login() throws InterruptedException {
 	 	driver=initializedriver();
+	 	System.out.println("browser is initialized");
 	 	 driver.get("https://www.abhibus.com/");
 	 	  driver.manage().window().maximize();
 	 	   WebElement acclogin = driver.findElement(By.id("AccLogin"));
