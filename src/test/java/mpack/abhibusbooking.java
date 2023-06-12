@@ -29,7 +29,9 @@ public class abhibusbooking extends Base {
 	 	   mobileno2.sendKeys("7993543979");
 	 	   WebElement otp=driver.findElement(By.id("getotp"));
 	 	   otp.click();
+		 System.out.println("browser is closed");
 	 	   driver.close();
+		 
 	 }
 
 	
